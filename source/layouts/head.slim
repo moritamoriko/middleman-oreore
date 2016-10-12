@@ -1,0 +1,21 @@
+head
+	meta content="IE=edge" http-equiv="X-UA-Compatible"
+	meta charset="utf-8"
+	meta discription= "#{data.site.discription}"
+	meta keywords= "#{data.site.keywords}"
+	meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"
+	/! Use title if it's in the page YAML frontmatter
+	- if current_page.data.title
+		title = "#{current_page.data.title}【#{data.site.name}】"
+	- else
+		title = "【#{data.site.name}】"
+
+	= favicon_tag 'favicon.png'
+	link href= "#{data.site.url}webclip.png" rel="apple-touch-icon"
+	link href= "favicon.png" rel= "shortcut icon"
+	link href= "favicon.png" rel= "icon" sizes= "192x192"
+
+	= stylesheet_link_tag "//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css"
+	= stylesheet_link_tag :site
+	= javascript_include_tag "//code.jquery.com/jquery-1.12.4.min.js"
+	= javascript_include_tag :all

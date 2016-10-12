@@ -2,6 +2,10 @@
 # Page options, layouts, aliases and proxies
 ###
 
+# Use relative URLs
+# activate :relative_assets
+# set :relative_links, true
+
 # Per-page layout changes:
 #
 # With no layout
@@ -41,9 +45,11 @@ configure :build do
 
   # Minify Javascript on build
   # activate :minify_javascript
+
+  # ignore "xxxx"
 end
 
-# activate :sprockets
+activate :sprockets
 
 # slim
 # Slim::Engine.set_default_options :pretty => true

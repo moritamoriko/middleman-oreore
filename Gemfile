@@ -14,5 +14,5 @@ gem 'middleman-livereload'
 gem 'middleman-sprockets', '~> 4.0.0.rc.3'
 
 # coding
-# gem "slim"
-# gem 'bootstrap'
+gem "slim"
+gem 'bootstrap'
